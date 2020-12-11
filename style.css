@@ -1,0 +1,346 @@
+body{
+    background-image: url(resources/background2.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 100%;
+    float: left;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#notification{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#clock{
+    width: 300px;
+    height: 75px;
+    margin-left: auto;  
+    margin-right: auto;
+    text-align: center;
+}
+
+#clockText{
+    font-size: 4em;
+    font-weight: lighter;
+    color: white;
+}
+
+#calendar{
+    width: 300px;
+    height: 75px;
+    margin-left: auto;  
+    margin-right: auto;
+    text-align: center;
+}
+
+#dateText{
+    color: white;
+    font-size: 1em;
+}
+
+#dateLuna{
+    color: white;
+    font-size: 0.8em;
+    margin-top: -10px;
+}
+
+#musicPlayer{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    z-index: 1;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+#musicPlayer::before{
+    content: '';
+    position: absolute;
+    margin: -10px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 520px;
+    height: 270px;
+    border-radius: 10px;
+    filter:blur(10px);
+    -webkit-filter:blur(10px);
+    -moz-filter:blur(10px);
+    -ms-filter:blur(10px);
+    -o-filter:blur(10px);
+    background-image: url(resources/background2.JPG);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 100%;
+    z-index: -1;
+}
+
+#musicPlayer::after{
+    content: '';
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+#album-icon{
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-image: url(resources/albumIcon.png);
+    background-position: top;
+    background-size: 100%;
+    border-radius: 4px;
+}
+
+#song-info{
+    width: 420px;
+    height:60px;
+    margin-top: 20px;
+    float: left;
+}
+
+#song-title{
+    float: left;
+    margin-left: 15px;
+    font-weight: bold;
+    position: absolute;
+}
+
+#albumAndArtist{
+    float: left;
+    margin-top: 38px;
+    margin-left: 15px;
+    position: absolute;
+}
+
+#controlArea{
+    width: 100%;
+    height:160px;
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#processBar{
+    width: 92%;
+    height: 50px;
+    margin: 0 auto 0 auto;
+}
+
+#barBackground{
+    position: absolute;
+    width: 92%;
+    height: 4px; 
+    margin-top: 20px;
+    border-radius: 1.5px;
+    background-color: black;
+    opacity: 0.40;
+    z-index: 1;
+}
+
+#barPlayed{
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    margin-top: 20px;
+    border-radius: 1.5px;
+    background-color: black;
+    opacity: 1;
+    z-index: 2;
+}
+
+#currentTime{
+    float: left;
+    font-size: 0.8em;
+    margin-top: 30px;
+    opacity: 0.60;
+}
+
+#leftTime{
+    float: right;
+    font-size: 0.8em;
+    margin-top: 30px;
+    opacity: 0.60;
+}
+
+#previous{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 80px;
+    position: relative;
+}
+
+#pause{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#next{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 80px;
+    position: relative;
+}
+
+#volumeBar{
+    position: relative;
+    width: 75%;
+    height: 50px;
+    margin: 20px auto 0 auto;
+}
+
+#volumeBarBackground{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    opacity: 0.40;
+    position: absolute;
+}
+
+#volumeBarMoved{
+    width: 20px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+}
+
+#controlDot{
+    position: absolute;
+    float: left;
+    border-radius: 7.5px;
+    width: 15px;
+    height: 15px;
+    margin-top: -5.5px;
+    margin-left:23.75px;
+    background-color: white;
+}
+
+#noti-header{
+    color: white;
+    font-weight: lighter;
+    text-align: left;
+    font-size: 1.5em;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10px;
+    /* margin-top: -5px; */
+}
+
+.noti-block{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: 1;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+.noti-block::before{
+    content: '';
+    position: absolute;
+    margin: -20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 540px;
+    height: 140px;
+    border-radius: 10px;
+    filter:blur(10px);
+    -webkit-filter:blur(10px);
+    -moz-filter:blur(10px);
+    -ms-filter:blur(10px);
+    -o-filter:blur(10px);
+    z-index: -1;
+    background-image: url(resources/background2.JPG);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 100%;
+}
+
+.noti-block::after{
+    content: '';
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+.noti-icon{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-image: url(resources/softwareIcon.jpg);
+    background-size: 100%;
+    border-radius: 4px;
+}
+
+.noti-title{
+    float: left;
+    margin-left: 6px;
+    margin-top: 12px;
+    font-size: 0.3em;
+    color: darkslategray;
+}
+
+.noti-time{
+    float: right;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-right: 12px;
+    font-size: 0.3em;
+    color: darkslategray;
+}
+
