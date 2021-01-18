@@ -13,20 +13,20 @@ body,html{
     margin: 0;
 }
 
-#container{
+.container{
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-#notification{
+.notification{
     width: 100%;
     height: 100%;
     text-align: center;
     position: relative;
 }
 
-#clock{
+.clock{
     width: 300px;
     height: 75px;
     margin-left: auto;  
@@ -34,13 +34,13 @@ body,html{
     text-align: center;
 }
 
-#clockText{
+.clockText{
     font-size: 4em;
     font-weight: lighter;
     color: white;
 }
 
-#calendar{
+.calendar{
     width: 300px;
     height: 75px;
     margin-left: auto;  
@@ -48,18 +48,18 @@ body,html{
     text-align: center;
 }
 
-#dateText{
+.dateText{
     color: white;
     font-size: 1em;
 }
 
-#dateLuna{
+.dateLuna{
     color: white;
     font-size: 0.8em;
     margin-top: -10px;
 }
 
-#musicPlayer{
+.musicPlayer{
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -68,51 +68,22 @@ body,html{
     border-radius: 10px;
     z-index: 1;
     box-sizing: border-box;
-    text-align: center;
     overflow: hidden;
 }
 
-#musicPlayer::before{
-    content: '';
-    position: absolute;
-    margin: -10px;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+.musicPlayer::before{
     width: 520px;
     height: 270px;
-    border-radius: 10px;
-    filter:blur(10px);
-    -webkit-filter:blur(10px);
-    -moz-filter:blur(10px);
-    -ms-filter:blur(10px);
-    -o-filter:blur(10px);
-    background-image: url(resources/background2.JPG);
-    background-attachment: fixed;
-    background-position: top;
-    background-size: 100%;
     z-index: -1;
 }
 
-#musicPlayer::after{
-    content: '';
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+.musicPlayer::after{   
     width: 500px;
     height: 250px;
-    border-radius: 10px;
-    background-color: white;
     z-index: -1;
-    opacity: 0.55;
 }
 
-#album-icon{
+.album-icon{
     float: left;
     height: 60px;
     width: 60px;
@@ -124,28 +95,28 @@ body,html{
     border-radius: 4px;
 }
 
-#song-info{
+.song-info{
     width: 420px;
     height:60px;
     margin-top: 20px;
     float: left;
 }
 
-#song-title{
+.song-title{
     float: left;
     margin-left: 15px;
     font-weight: bold;
     position: absolute;
 }
 
-#albumAndArtist{
+.albumAndArtist{
     float: left;
     margin-top: 38px;
     margin-left: 15px;
     position: absolute;
 }
 
-#controlArea{
+.controlArea{
     width: 100%;
     height:160px;
     position: relative;
@@ -153,94 +124,99 @@ body,html{
     text-align: center;
 }
 
-#processBar{
+.processBar{
     width: 92%;
     height: 50px;
     margin: 0 auto 0 auto;
 }
 
-#barBackground{
+.barBackground{
     position: absolute;
     width: 92%;
-    height: 4px; 
     margin-top: 20px;
-    border-radius: 1.5px;
     background-color: black;
     opacity: 0.40;
     z-index: 1;
 }
 
-#barPlayed{
+.barPlayed{
     position: absolute;
     width: 20%;
-    height: 4px;
     margin-top: 20px;
-    border-radius: 1.5px;
     background-color: black;
     opacity: 1;
     z-index: 2;
 }
 
-#currentTime{
+.currentTime{
     float: left;
     font-size: 0.8em;
     margin-top: 30px;
-    opacity: 0.60;
 }
 
-#leftTime{
+.leftTime{
     float: right;
     font-size: 0.8em;
     margin-top: 30px;
-    opacity: 0.60;
 }
 
-#previous{
+.controlButtons{
+    position: relative;
+    width: 60%;
+    height: 40%;
+    margin: 0 auto 0 auto;
+}
+
+.previous{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 0;
+    position: relative;
+    background-color: blue;
+}
+
+.pause{
     width: 30px;
     height: 30px;
     margin-top: 10px;
-    margin-right: 80px;
-    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    float: left;
+    position: absolute;
+    background-color: brown;
 }
 
-#pause{
+.next{
+    float: right;
     width: 30px;
     height: 30px;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     position: relative;
+    background-color: cadetblue;
 }
 
-#next{
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 80px;
-    position: relative;
-}
-
-#volumeBar{
+.volumeBar{
     position: relative;
     width: 75%;
     height: 50px;
     margin: 20px auto 0 auto;
 }
 
-#volumeBarBackground{
+.volumeBarBackground{
     width: 100%;
-    height: 4px;
     background-color: black;
     opacity: 0.40;
     position: absolute;
 }
 
-#volumeBarMoved{
+.volumeBarMoved{
     width: 20px;
-    height: 4px;
     background-color: black;
     position: absolute;
 }
 
-#controlDot{
+.controlDot{
     position: absolute;
     float: left;
     border-radius: 7.5px;
@@ -251,7 +227,7 @@ body,html{
     background-color: white;
 }
 
-#noti-header{
+.noti-header{
     color: white;
     font-weight: lighter;
     text-align: left;
@@ -264,6 +240,7 @@ body,html{
 }
 
 .noti-block{
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -277,43 +254,17 @@ body,html{
 }
 
 .noti-block::before{
-    content: '';
-    position: absolute;
-    margin: -20px;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
     width: 540px;
     height: 140px;
-    border-radius: 10px;
-    filter:blur(10px);
-    -webkit-filter:blur(10px);
-    -moz-filter:blur(10px);
-    -ms-filter:blur(10px);
-    -o-filter:blur(10px);
+
+    
     z-index: -1;
-    background-image: url(resources/background2.JPG);
-    background-attachment: fixed;
-    background-position: top;
-    background-size: 100%;
 }
 
 .noti-block::after{
-    content: '';
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
     width: 500px;
     height: 100px;
-    border-radius: 10px;
-    background-color: white;
     z-index: -1;
-    opacity: 0.55;
 }
 
 .noti-icon{
@@ -331,8 +282,6 @@ body,html{
     float: left;
     margin-left: 6px;
     margin-top: 12px;
-    font-size: 0.3em;
-    color: darkslategray;
 }
 
 .noti-time{
@@ -340,7 +289,54 @@ body,html{
     margin-right: 0px;
     margin-top: 10px;
     margin-right: 12px;
-    font-size: 0.3em;
-    color: darkslategray;
 }
 
+.noti-title,.noti-time,.currentTime,.leftTime{
+    font-size: 0.3em;
+    color: black;
+    opacity: 0.65;
+}
+
+.song-title,.albumAndArtist{
+    font-size: 1.0em;
+    color: black;
+}
+
+.volumeBarBackground,.volumeBarMoved,.barBackground,.barPlayed{
+    height: 4px;
+    border-radius: 2px;
+}
+
+.noti-block::before,.musicPlayer::before{
+    content: '';
+    position: absolute;
+    margin: -10px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    filter:blur(10px);
+    -webkit-filter:blur(10px);
+    -moz-filter:blur(10px);
+    -ms-filter:blur(10px);
+    -o-filter:blur(10px);
+    background-image: url(resources/background2.JPG);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 100%;
+}
+
+.noti-block::after,.musicPlayer::after{
+    content: '';
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.55;
+}
