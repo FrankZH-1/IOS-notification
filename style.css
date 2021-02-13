@@ -3,6 +3,7 @@ body{
     background-attachment: fixed;
     background-position: top;
     background-size: 100%;
+    background-repeat: no-repeat;
     float: left;
 }
 
@@ -167,35 +168,41 @@ body,html{
     margin: 0 auto 0 auto;
 }
 
-.previous{
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 0 0;
-    position: relative;
-    background-color: blue;
+.fill{
+    width: 50px;
+    height: 50px;
+    margin: 5px 0 0 0;
+    background-size: 100%;
+    transition:0.2s;
 }
 
-.pause{
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    left:50%;
-    transform: translateX(-50%);
+.previous .fill{
     float: left;
+    position: relative;
+    background-image: url(resources/previous.png);
+}
+
+.pause .fill{
+    /* left:50%; */
+    right: 50%;
+    margin-right: -25px;
     position: absolute;
-    background-color: brown;
+    background-image: url(resources/play.png);
 }
 
-.next{
+.next .fill{
     float: right;
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 0 0;
     position: relative;
-    background-color: cadetblue;
+    background-image: url(resources/next.png);
 }
 
+.fill:active{
+    transform: scale(0.8,0.8);
+}
+
+/* .pause .fill:active{
+    transform: scale(0.8,0.8) translateX(50%);
+} */
 .volumeBar{
     position: relative;
     width: 75%;
@@ -223,8 +230,17 @@ body,html{
     width: 15px;
     height: 15px;
     margin-top: -5.5px;
-    margin-left:23.75px;
+    margin-left: 100px;
     background-color: white;
+    transition: 0.3s;
+}
+
+.controlDot:hover{
+    transform:scale(1.5,1.5);
+}
+
+.controlDot:active{
+    background-color: lightgray;
 }
 
 .noti-header{
